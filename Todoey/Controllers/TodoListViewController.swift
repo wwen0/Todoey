@@ -12,25 +12,8 @@ class TodoListViewController: UITableViewController {
     var itemArray = [Item]()
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
-//    let defaults = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        print(dataFilePath)
-        
-//        let newItem = Item()
-//        newItem.title = "Find Mike"
-//        itemArray.append(newItem)
-//
-//        let newItem2 = Item()
-//        newItem2.title = "Buy Eggs"
-//        itemArray.append(newItem2)
-//
-//        let newItem3 = Item()
-//        newItem3.title = "Destroy Demogorgon"
-//        itemArray.append(newItem3)
         
         loadItems()
        
@@ -81,7 +64,6 @@ class TodoListViewController: UITableViewController {
             
             self.itemArray.append(newItem)
             
-//            self.defaults.set(self.itemArray, forKey:"TodoListArray")
             self.saveItems()
             
             self.tableView.reloadData()
